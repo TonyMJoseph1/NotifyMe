@@ -1,9 +1,9 @@
 {
   "name": "NotifyMe",
   "version": "0.1.0",
-  "summary": "A short description of NotifyMe.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/NotifyMe",
+  "summary": "A subclass of UIButton that notify a user via email.",
+  "description": "TODO: This CocoaPod provides a button iof its class the ability to notify a user via email he or she entered.",
+  "homepage": "https://github.com/TonyMJoseph1/NotifyMe",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Tony M Joseph": "tonyj@qburst.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/NotifyMe.git",
+    "git": "https://github.com/TonyMJoseph1/NotifyMe.git",
     "tag": "0.1.0"
   },
   "platforms": {
