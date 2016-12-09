@@ -1,0 +1,6 @@
+framework module NotifyMe {
+  umbrella header "NotifyMe-umbrella.h"
+
+  export *
+  module * { export * }
+}

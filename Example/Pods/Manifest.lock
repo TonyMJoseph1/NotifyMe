@@ -1,0 +1,16 @@
+PODS:
+  - NotifyMe (0.1.0)
+
+DEPENDENCIES:
+  - NotifyMe (from `../`)
+
+EXTERNAL SOURCES:
+  NotifyMe:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NotifyMe: 9b17f1b62f67eb128f0123468008d21e0e8732ff
+
+PODFILE CHECKSUM: f8e3ad47b6401b3ea5583ce199a8a110a578c82e
+
+COCOAPODS: 1.1.1
