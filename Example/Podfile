@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NotifyMe_Example' do
+  pod 'NotifyMe', :path => '../'
+
+  target 'NotifyMe_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
