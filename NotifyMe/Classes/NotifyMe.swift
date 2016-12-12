@@ -21,6 +21,10 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
     open weak var delegate: NotifyMeDelegate?
     var buttonColor = UIColor()
     var buttonFontSize = CGFloat()
+    let initialButtonTitle : String = "Notify Me"
+    let successButtonTitle : String = "Thank You!"
+    let textFieldPlaceHolderValue : String = "E-mail"
+    
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,13 +42,13 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
     }
     
     func setupCommon() {
-        // we should use old swift syntax for pass validation of podspec
+        
+        // Set button properties and actions
         buttonColor = self.currentTitleColor
         buttonFontSize = (self.titleLabel?.font.pointSize)!
         addTarget(self, action: #selector(NotifyMe.touchUpInside(_:)), for: .touchUpInside)
-        setTitle("Notify Me", for: UIControlState())
+        setTitle(initialButtonTitle, for: UIControlState())
         setTitleColor(buttonColor, for: UIControlState.normal)
-//        self.backgroundColor = UIColor.white
         layer.cornerRadius  = bounds.midY
         contentEdgeInsets = UIEdgeInsets(top: 0,
                                          left: 0,
@@ -56,6 +60,7 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
     
     
     func touchUpInside(_ sender: NotifyMe) {
+        //NotifyMe button clickaction
         if (!self.buttonClicked) {
             self.buttonClicked = true
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
@@ -80,17 +85,16 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
             })
         }
     }
+    
     func sendButtonTapped() {
         self.delegate?.didFinishTask(email: self.emailTextField.text! , button: self)
     }
     
     open func success() {
+        self.titleLabel?.layer.opacity = 0.0;
         self.isEnabled = false
-        self.setTitle("Thank You!", for: UIControlState())
-        self.setTitleColor(buttonColor.withAlphaComponent(0), for: UIControlState.normal)
-            self.complete()
-
-
+        self.setTitle(successButtonTitle, for: UIControlState())
+        self.complete()
         
     }
     
@@ -99,19 +103,13 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
             self.sendButton.isHidden = true
             self.frame.size.width -= 100
             self.frame.origin.x += 50
-
             self.emailTextField.removeFromSuperview()
             self.sendButton.removeFromSuperview()
-//            self.setTitle("Thank You!", for: UIControlState())
             self.setTitleColor(self.buttonColor.withAlphaComponent(1), for: UIControlState.normal)
-            
             self.titleLabel?.font.withSize(0)
         },                       completion: { finish in
             self.titleLabel?.font.withSize(self.buttonFontSize)
-            
         })
-        
-        
     }
     
     func isValidEmail(testStr:String) -> Bool {
@@ -148,7 +146,6 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
     
     
     func setUpsendButton()  {
-        buttonColor = self.currentTitleColor
         self.sendButton  = UIButton(frame:CGRect(x :self.frame.size.width * 0.75 - 5, y :4,width : self.frame.size.width/4   ,height :self.frame.size.height-8))
         self.sendButton.layer.cornerRadius  = self.sendButton.bounds.midY
         self.sendButton.addTarget(self, action: #selector(NotifyMe.sendButtonTapped), for: .touchUpInside)
@@ -160,11 +157,10 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
     }
     
     func setUpEmailTextField() {
-        buttonColor = self.currentTitleColor
         self.emailTextField = TextField (frame:CGRect(x :10, y :0,width : self.sendButton.frame.minX - 10 ,height :self.frame.size.height))
         self.emailTextField.delegate = self
         self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
-        self.emailTextField.attributedPlaceholder = NSAttributedString(string:"E-mail",
+        self.emailTextField.attributedPlaceholder = NSAttributedString(string:textFieldPlaceHolderValue,
                                                                        attributes:[NSForegroundColorAttributeName: buttonColor])
         self.emailTextField.layer.cornerRadius = self.bounds.midY - 5
         self.emailTextField.backgroundColor = UIColor.white
