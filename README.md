@@ -20,6 +20,20 @@ it, simply add the following line to your Podfile:
 pod "NotifyMe"
 ```
 
+
+## Example Project
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Usage
+
+* Drag and drop a button in the storyboard and set its constraints and attributes like background color and title color.
+* Set the button class and module to NotifyMe
+* Add its delegate methods.
+* In the didFinishTask delegate method the entered emailId is read.
+* After completing the task with the entered emailId call complete function with .success or .failure argument.
+
+
 ## Author
 
 Tony M Joseph, tonyj@qburst.com

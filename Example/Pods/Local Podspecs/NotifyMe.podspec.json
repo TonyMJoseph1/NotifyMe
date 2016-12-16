@@ -1,8 +1,8 @@
 {
   "name": "NotifyMe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A subclass of UIButton that notify a user via email.",
-  "description": "TODO: This CocoaPod provides a button iof its class the ability to notify a user via email he or she entered.",
+  "description": "This CocoaPod provides a button iof its class the ability to notify a user via email he or she entered.",
   "homepage": "https://github.com/TonyMJoseph1/NotifyMe",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/TonyMJoseph1/NotifyMe.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
