@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary          = 'A subclass of UIButton that notify a user via email.'
 
 
-  s.description      = 'This CocoaPod provides a button iof its class the ability to notify a user via email he or she entered.'
+  s.description      = 'This CocoaPod provides a button of its class the ability to notify a user via email he or she entered.'
 
 
   s.homepage         = 'https://github.com/TonyMJoseph1/NotifyMe'

@@ -27,7 +27,7 @@ class ViewController: UIViewController,NotifyMeDelegate {
     func didFinishTask(email: String, button: NotifyMe) {
         // do the task using the email
         button.complete(result: .success)  //if success
-//        button.success(result: .failure)   // show corresponding alert if error and call retry function
+//        button.complete(result: .failure)   // show corresponding alert if error and call retry function
     }
 
 }
