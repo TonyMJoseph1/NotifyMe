@@ -33,15 +33,15 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
-                                        <color key="value" red="0.2479736011" green="0.38251271640000001" blue="0.98877716059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.4823529412" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.4823529412" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4eg-B0-gel" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="84d-d2-mfM"/>
                             <constraint firstItem="4eg-B0-gel" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="112" id="jRD-Xd-mrW"/>

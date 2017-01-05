@@ -88,6 +88,7 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
         if (!self.buttonClicked) {
             self.layer.borderColor = borderColor.cgColor
             self.buttonClicked = true
+            self.titleLabel?.layer.opacity = 0.0;
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.frame.size.width += self.widthChangeConstant
                 self.frame.origin.x -= self.widthChangeConstant / 2
