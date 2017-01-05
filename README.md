@@ -10,7 +10,7 @@
 NotifyMe is a subclass of UIButton, written in Swift 3. NotifyMe is customizable button that allows user to enter an email and send appropriate messages to the same.
 
 <p align="center">
-<img src="http://imgur.com/PNqtDQ7" alt="NotifyMe" />
+<img src="http://i.imgur.com/PNqtDQ7.gif" alt="NotifyMe" />
 </p>
 
 
