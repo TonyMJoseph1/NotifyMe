@@ -1,5 +1,5 @@
 PODS:
-  - NotifyMe (0.1.2)
+  - NotifyMe (0.2)
 
 DEPENDENCIES:
   - NotifyMe (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NotifyMe: e744e1b5ca3057447146519ff19791298b0c07af
+  NotifyMe: 112dd57737a907d5afb16c0f2e97d378eaadad0c
 
 PODFILE CHECKSUM: f8e3ad47b6401b3ea5583ce199a8a110a578c82e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.3

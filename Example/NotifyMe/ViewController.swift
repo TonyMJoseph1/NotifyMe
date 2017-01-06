@@ -9,10 +9,9 @@
 import UIKit
 import NotifyMe
 
-class ViewController: UIViewController,NotifyMeDelegate {
+class ViewController: UIViewController, NotifyMeDelegate {
 
     @IBOutlet weak var notifyMeButton: NotifyMe!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +22,6 @@ class ViewController: UIViewController,NotifyMeDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     func didFinishTask(email: String, button: NotifyMe) {
         // do the task using the email
         button.complete(result: .success)  //if success
@@ -31,4 +29,3 @@ class ViewController: UIViewController,NotifyMeDelegate {
     }
 
 }
-
