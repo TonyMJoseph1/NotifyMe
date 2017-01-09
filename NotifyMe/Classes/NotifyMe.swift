@@ -8,20 +8,18 @@
 
 import UIKit
 
-public protocol NotifyMeDelegate: class {
-    func didFinishTask(email: String, button: NotifyMe)
-}
-
 public enum Result {
     case success
     case failure
 }
+public typealias CompletionMethod = (NotifyMe) -> Void
 
 public class NotifyMe: UIButton, UITextFieldDelegate {
+    public var notifyUser: CompletionMethod?
+
     var  sendButton = UIButton()
-    var  emailTextField = TextField()
+    public var  emailTextField = UITextField()
     var buttonClicked: Bool = false
-    open weak var delegate: NotifyMeDelegate?
     var buttonTitleColor = UIColor()
     var buttonFontSize = CGFloat()
     let initialButtonTitle: String = "Notify Me"
@@ -96,7 +94,7 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
         }
     }
     func sendButtonTapped() {
-        self.delegate?.didFinishTask(email: self.emailTextField.text!, button: self)
+        self.notifyUser!(self)
     }
     open func complete(result: Result) {
         if result == .success {
@@ -113,6 +111,10 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
         self.titleLabel?.layer.opacity = 0.0
         self.endTask()
     }
+    open func fetchEmail(completion: @escaping CompletionMethod) {
+        notifyUser = completion
+    }
+
     func endTask() {
         UIView.animate(withDuration: 0.5, delay: 0, animations: {
             self.sendButton.isHidden = true

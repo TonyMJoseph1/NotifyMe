@@ -80,18 +80,12 @@ import NotifyMe
 
 * Drag and drop a button in the storyboard and set its constraints and attributes like background color and title color.
 * Set the button class and module to NotifyMe.
-* Set delegate of the button.
-* In the didFinishTask delegate method do the task with the entered emailId.
-* After completing the task with the entered emailId call complete function with .success or .failure argument.
+* Call the function fetchEmail as follows:
 
 ```swift
 
-notifyButton.delegate = self
-
-extension ViewController: NotifyMeDelegate {
-
-func didFinishTask(email: String, button: NotifyMe) {
-button.complete(result: .success)
+notifyMeButton.fetchEmail { (_) in
+self.notifyMeButton.complete(result: .success) // if success
 }
 ```
 
