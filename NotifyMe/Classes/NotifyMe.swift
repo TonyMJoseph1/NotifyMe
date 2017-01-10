@@ -12,7 +12,6 @@ public enum Result {
     case success
     case failure
 }
-public typealias CompletionMethod = (NotifyMe) -> Void
 
 public class NotifyMe: UIButton, UITextFieldDelegate {
     public var notifyUser: CompletionMethod?
@@ -35,6 +34,7 @@ public class NotifyMe: UIButton, UITextFieldDelegate {
             layer.borderColor = borderColor.cgColor
         }
     }
+    public typealias CompletionMethod = (NotifyMe) -> Void
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupCommon()
