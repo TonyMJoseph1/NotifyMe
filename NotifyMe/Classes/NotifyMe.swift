@@ -16,7 +16,6 @@ public typealias CompletionMethod = (NotifyMe) -> Void
 
 public class NotifyMe: UIButton, UITextFieldDelegate {
     public var notifyUser: CompletionMethod?
-
     var  sendButton = UIButton()
     public var  emailTextField = UITextField()
     var buttonClicked: Bool = false

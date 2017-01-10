@@ -80,6 +80,9 @@ import NotifyMe
 
 * Drag and drop a button in the storyboard and set its constraints and attributes like background color and title color.
 * Set the button class and module to NotifyMe.
+<p align="center">
+<img src="http://i.imgur.com/CvlxyQp.jpg" alt="NotifyMe" />
+</p>
 * Call the function fetchEmail as follows:
 
 ```swift
